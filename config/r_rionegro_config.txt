@@ -1,0 +1,40 @@
+---- HOSTNAME CONFIG
+
+Router>enable
+Router#configure terminal
+Router(config)#hostname RT-Rionegro
+RT-Rionegro(config)#exit
+
+RT-Rionegro#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+
+---- GIGABITETHERNET 0/0 CONFIG
+
+RT-Rionegro>enable
+RT-Rionegro#configure terminal
+RT-Rionegro(config)#interface gigabitEthernet 0/0
+RT-Rionegro(config-if)#ip address 172.20.0.9 255.255.255.248
+RT-Rionegro(config-if)#no shutdown
+RT-Rionegro(config-if)#exit
+
+RT-Rionegro#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+
+---- SERIAL 0/0/0 CONFIG
+
+RT-Rionegro>enable
+RT-Rionegro#configure terminal
+RT-Rionegro(config)#interface serial 0/0/0
+RT-Rionegro(config-if)#ip address 172.20.0.49 255.255.255.252
+RT-Rionegro(config-if)#no shutdown
+RT-Rionegro(config-if)#exit
+RT-Rionegro(config)#exit
+
+RT-Rionegro#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
