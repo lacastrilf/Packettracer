@@ -56,3 +56,14 @@ RT-Barranquilla#copy running-config startup-config
 Destination filename [startup-config]? 
 Building configuration...
 [OK]
+
+---- IP Route CONFIG (Barranquilla-Bogotá)
+RT-Barranquilla>enable
+RT-Barranquilla#configure terminal
+Enter configuration commands, one per line.  End with CNTL/Z.
+RT-Barranquilla(config)#exit
+
+RT-Barranquilla#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]

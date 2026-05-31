@@ -51,3 +51,13 @@ Destination filename [startup-config]?
 Building configuration...
 [OK]
 
+---- IP Route CONFIG (Cali-Bogotá)
+RT-Cali>enable 
+RT-Cali#configure terminal 
+RT-Cali(config)#ip route 0.0.0.0 0.0.0.0 172.20.0.65
+RT-Cali(config)#exit
+
+RT-Cali#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]

@@ -55,10 +55,21 @@ Destination filename [startup-config]?
 Building configuration...
 [OK]
 
----- IP Route CONFIG (Bogotá-Medellin)
+---- IP Route CONFIG (Bogotá-Barranquilla)
 RT-Bogota>enable 
 RT-Bogota#configure terminal
-RT-Bogota(config)#ip route 172.20.0.52 255.255.255.252 172.20.0.53
+RT-Bogota(config)#ip route 172.20.0.16 255.255.255.248 172.20.0.57
+RT-Bogota(config)#exit
+
+RT-Bogota#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+
+---- IP Route CONFIG (Bogotá-Cartagena)
+RT-Bogota>enable 
+RT-Bogota#configure terminal
+RT-Bogota(config)#ip route 172.20.0.32 255.255.255.248 172.20.0.57
 RT-Bogota(config)#exit
 
 RT-Bogota#copy running-config startup-config 
@@ -67,3 +78,46 @@ Building configuration...
 [OK]
 
 ---- IP Route CONFIG (Bogotá-Cali)
+RT-Bogota>enable 
+RT-Bogota#configure terminal
+RT-Bogota(config)#ip route 172.20.0.0 255.255.255.248 172.20.0.66
+RT-Bogota(config)#exit
+
+RT-Bogota#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+
+---- IP Route CONFIG (Bogotá-Popayan)
+RT-Bogota>enable 
+RT-Bogota#configure terminal
+RT-Bogota(config)#ip route 172.20.0.40 255.255.255.248 172.20.0.66
+RT-Bogota(config)#exit
+
+RT-Bogota#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+
+---- IP Route CONFIG (Bogotá-Medellin)
+RT-Bogota>enable 
+RT-Bogota#configure terminal
+RT-Bogota(config)#ip route 172.20.0.24 255.255.255.248 172.20.0.53
+RT-Bogota(config)#exit
+
+RT-Bogota#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+
+---- IP Route CONFIG (Bogotá-Rionegro)
+RT-Bogota>enable 
+RT-Bogota#configure terminal
+RT-Bogota(config)#ip route 172.20.0.8 255.255.255.248 172.20.0.53
+RT-Bogota(config)#exit
+
+RT-Bogota#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+

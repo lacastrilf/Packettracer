@@ -69,7 +69,7 @@ Building configuration...
 ---- IP Route CONFIG (Medellin-Bogotá)
 RT-Medellin>enable
 RT-Medellin#configure terminal
-RT-Medellin(config)#ip route 172.20.0.52 255.255.255.252 172.20.0.58
+RT-Medellin(config)#ip route 0.0.0.0 0.0.0.0 172.20.0.54
 RT-Medellin(config)#exit
 
 RT-Medellin#copy running-config startup-config 
