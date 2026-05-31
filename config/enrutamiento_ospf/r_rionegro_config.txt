@@ -38,3 +38,14 @@ RT-Rionegro#copy running-config startup-config
 Destination filename [startup-config]? 
 Building configuration...
 [OK]
+
+--- OSPF CONFIG
+
+RT-Rionegro>enable
+RT-Rionegro#configure terminal
+RT-Rionegro(config)#router ospf 1
+RT-Rionegro(config-router)#network 172.20.0.8 0.0.0.7 area 0
+RT-Rionegro(config-router)#network 172.20.0.48 0.0.0.3 area 0
+RT-Rionegro(config-router)#do write
+RT-Rionegro(config-router)#exit
+RT-Rionegro(config)#exit

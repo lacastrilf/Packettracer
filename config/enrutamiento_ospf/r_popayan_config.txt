@@ -36,3 +36,13 @@ RT-Popayan#copy running-config startup-config
 Destination filename [startup-config]? 
 Building configuration...
 [OK]
+
+--- OSPF CONFIG
+
+RT-Popayan>enable
+RT-Popayan#configure terminal
+RT-Popayan(config)#router ospf 1
+RT-Popayan(config-router)#network 172.20.0.40 0.0.0.7 area 0 
+RT-Popayan(config-router)#network 172.20.0.68 0.0.0.3 area 0
+RT-Popayan(config-router)#do write
+RT-Popayan(config-router)#exit
