@@ -10,6 +10,22 @@ Destination filename [startup-config]?
 Building configuration...
 [OK]
 
+
+---- SERIAL 0/0/0 CONFIG (Bogotá-Barranquilla)
+
+RT-Bogota>enable
+RT-Bogota#configure terminal
+RT-Bogota(config)#interface Serial 0/0/0
+RT-Bogota(config-if)#ip address 172.20.0.58 255.255.255.252
+RT-Bogota(config-if)#no shutdown
+RT-Bogota(config-if)#exit
+RT-Bogota(config)#exit
+
+RT-Bogota#copy running-config startup-config
+Destination filename [startup-config]?
+Building configuration...
+[OK]
+
 ---- SERIAL 0/0/1 CONFIG (Bogotá-Medellín)
 
 Router>enable
@@ -25,17 +41,16 @@ Destination filename [startup-config]?
 Building configuration...
 [OK]
 
----- SERIAL 0/0/0 CONFIG (Bogotá-Barranquilla)
-
-RT-Bogota>enable
+---- SERIAL 0/1/0 CONFIG (Bogotá-Cali)
+RT-Bogota>enable 
 RT-Bogota#configure terminal
-RT-Bogota(config)#interface Serial 0/0/0
-RT-Bogota(config-if)#ip address 172.20.0.58 255.255.255.252
+RT-Bogota(config)#interface Serial0/1/0
+RT-Bogota(config-if)#ip address 172.20.0.65 255.255.255.252
 RT-Bogota(config-if)#no shutdown
 RT-Bogota(config-if)#exit
 RT-Bogota(config)#exit
 
 RT-Bogota#copy running-config startup-config
-Destination filename [startup-config]?
+Destination filename [startup-config]? 
 Building configuration...
 [OK]

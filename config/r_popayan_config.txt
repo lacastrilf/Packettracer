@@ -1,0 +1,38 @@
+---- HOSTNAME CONFIG (RT-Popayan)
+Router>enable
+Router#configure terminal
+Router(config)#hostname RT-Popayan
+RT-Popayan(config)#exit
+
+RT-Popayan#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+
+---- SERIAL 0/0/0 CONFIG (Popayan-Cali)
+RT-Popayan#enable
+RT-Popayan#configure terminal
+RT-Popayan(config)#interface Serial0/0/0
+RT-Popayan(config-if)#ip address 172.20.0.70 255.255.255.252
+RT-Popayan(config-if)#no shutdown
+RT-Popayan(config-if)#exit
+RT-Popayan(config)#exit
+
+RT-Popayan#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+
+---- GIGABITETHERNET 0/0 CONFIG (Host Popayan)
+RT-Popayan#enable
+RT-Popayan#configure terminal
+RT-Popayan(config)#interface GigabitEthernet0/0
+RT-Popayan(config-if)#ip address 172.20.0.41 255.255.255.248
+RT-Popayan(config-if)#no shutdown
+RT-Popayan(config-if)#exit
+RT-Popayan(config)#exit
+
+RT-Popayan#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
