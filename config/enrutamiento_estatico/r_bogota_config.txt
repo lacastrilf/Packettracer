@@ -31,7 +31,7 @@ Building configuration...
 Router>enable
 RT-Bogota#configure terminal
 RT-Bogota(config)#interface serial 0/0/1
-RT-Bogota(config-if)#ip address 170.20.0.54 255.255.255.252
+RT-Bogota(config-if)#ip address 172.20.0.54 255.255.255.252
 RT-Bogota(config-if)#no shutdown
 RT-Bogota(config-if)#exit
 RT-Bogota(config)#exit	

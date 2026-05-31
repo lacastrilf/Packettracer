@@ -56,3 +56,16 @@ RT-Barranquilla#copy running-config startup-config
 Destination filename [startup-config]? 
 Building configuration...
 [OK]
+
+--- OSPF CONFIG
+
+RT-Barranquilla>enable
+RT-Barranquilla#configure terminal
+RT-Barranquilla(config)#router ospf 1
+RT-Barranquilla(config-router)#network 172.20.0.16 0.0.0.7 area 0
+RT-Barranquilla(config-router)#network 172.20.0.60 0.0.0.3 area 0
+RT-Barranquilla(config-router)#network 172.20.0.56 0.0.0.3 area 0
+RT-Barranquilla(config-router)#do write
+RT-Barranquilla(config-router)#exit
+RT-Barranquilla(config)#exit
+

@@ -39,3 +39,14 @@ RT-Cartagena#copy running-config startup-config
 Destination filename [startup-config]? 
 Building configuration...
 [OK]
+
+--- OSPF CONFIG
+
+RT-Cartagena>enable
+RT-Cartagena#configure terminal
+RT-Cartagena(config)#router ospf 1
+RT-Cartagena(config-router)#network 172.20.0.32 0.0.0.7 area 0
+RT-Cartagena(config-router)#network 172.20.0.60 0.0.0.3 area 0
+RT-Cartagena(config-router)#do write
+RT-Cartagena(config-router)#exit
+RT-Cartagena(config)#exit

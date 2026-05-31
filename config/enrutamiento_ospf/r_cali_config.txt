@@ -51,3 +51,14 @@ Destination filename [startup-config]?
 Building configuration...
 [OK]
 
+--- OSPF CONFIG
+
+RT-Cali>enable
+RT-Cali#configure terminal
+RT-Cali(config)#router ospf 1
+RT-Cali(config-router)#network 172.20.0.0 0.0.0.7 area 0
+RT-Cali(config-router)#network 172.20.0.68 0.0.0.3 area 0
+RT-Cali(config-router)#network 172.20.0.64 0.0.0.3 area 0
+RT-Cali(config-router)#do write
+RT-Cali(config-router)#exi
+RT-Cali(config)#exit
