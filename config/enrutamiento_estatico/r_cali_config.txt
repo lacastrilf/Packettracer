@@ -61,3 +61,16 @@ RT-Cali#copy running-config startup-config
 Destination filename [startup-config]? 
 Building configuration...
 [OK]
+
+---- IP Route CONFIG (Cali-Popayan)
+
+RT-Cali>enable
+RT-Cali#configure terminal 
+RT-Cali(config)#ip route 172.20.0.40 255.255.255.248 172.20.0.70
+RT-Cali(config)#exit
+
+RT-Cali#copy running-config star
+RT-Cali#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]

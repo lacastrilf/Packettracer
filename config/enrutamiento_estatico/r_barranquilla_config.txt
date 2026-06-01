@@ -67,3 +67,15 @@ RT-Barranquilla#copy running-config startup-config
 Destination filename [startup-config]? 
 Building configuration...
 [OK]
+
+---- IP Route CONFIG (Barranquilla-Cartagena)
+
+RT-Barranquilla>enable
+RT-Barranquilla#configure terminal 
+RT-Barranquilla(config)#ip route 172.20.0.32 255.255.255.248 172.20.0.62
+RT-Barranquilla(config)#exit
+
+RT-Barranquilla#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]

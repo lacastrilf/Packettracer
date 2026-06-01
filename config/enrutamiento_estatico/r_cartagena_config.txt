@@ -39,3 +39,15 @@ RT-Cartagena#copy running-config startup-config
 Destination filename [startup-config]? 
 Building configuration...
 [OK]
+
+---- IP Route CONFIG (Cartagena-Barranquilla)
+
+RT-Cartagena>enable
+RT-Cartagena#configure terminal 
+RT-Cartagena(config)#ip route 0.0.0.0 0.0.0.0 172.20.0.61
+RT-Cartagena(config)#exit
+
+RT-Cartagena#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]

@@ -36,3 +36,15 @@ RT-Popayan#copy running-config startup-config
 Destination filename [startup-config]? 
 Building configuration...
 [OK]
+
+---- IP Route CONFIG (Popayan-Cali)
+
+RT-Popayan>enable
+RT-Popayan#configure terminal 
+RT-Popayan(config)#ip route 0.0.0.0 0.0.0.0 172.20.0.69
+RT-Popayan(config)#exit
+
+RT-Popayan#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]

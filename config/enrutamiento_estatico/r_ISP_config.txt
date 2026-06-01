@@ -1,0 +1,42 @@
+---- HOSTNAME CONFIG (RT-ISP)
+
+Router>enable
+Router#configure terminal 
+Router(config)#hostname RT-ISP
+RT-ISP(config)#exit
+RT-ISP#
+
+RT-ISP#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+
+---- SERIAL 0/0/0 CONFIG (ISP-Bogotá)
+
+RT-ISP>enable
+RT-ISP#configure terminal 
+RT-ISP(config)#interface Serial0/0/0
+RT-ISP(config-if)#ip address 172.10.0.2 255.255.255.252
+RT-ISP(config-if)#no shutdown
+RT-ISP(config-if)#exit
+RT-ISP(config)#exit
+
+RT-ISP#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+
+---- GIGABITETHERNET 0/0 CONFIG (ISP-Internet)
+
+RT-ISP>enable
+RT-ISP#configure terminal 
+RT-ISP(config)#interface gigabitethernet0/0
+RT-ISP(config-if)#ip address 172.10.0.5 255.255.255.252
+RT-ISP(config-if)#no shutdown
+RT-ISP(config-if)#exit
+RT-ISP(config)#exit
+
+RT-ISP#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]

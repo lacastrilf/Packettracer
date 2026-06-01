@@ -40,13 +40,13 @@ Building configuration...
 [OK]
 
 ---- IP Route CONFIG (Rionegro-Medellin)
-RT-Rionegro>enable 
-RT-Rionegro#configure terminal
-RT-Rionegro(config)#ip route 172.20.0.24 255.255.255.248 172.20.0.50
+
+RT-Rionegro>enable
+RT-Rionegro#configure terminal 
+RT-Rionegro(config)#ip route 0.0.0.0 0.0.0.0 172.20.0.50
 RT-Rionegro(config)#exit
 
 RT-Rionegro#copy running-config startup-config 
 Destination filename [startup-config]? 
 Building configuration...
 [OK]
-
