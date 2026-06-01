@@ -55,6 +55,18 @@ Destination filename [startup-config]?
 Building configuration...
 [OK]
 
+---- SERIAL 0/1/1 CONFIG (Bogotá-ISP)
+RT-Bogota>enable 
+RT-Bogota#configure terminal
+RT-Bogota(config)#interface Serial0/1/1
+RT-Bogota(config-if)#ip address 172.10.0.1 255.255.255.252
+RT-Bogota(config-if)#no shutdown
+
+RT-Bogota#copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+
 --- OSPF CONFIG
 
 RT-Bogota>enable
@@ -66,3 +78,32 @@ RT-Bogota(config-router)#network 172.20.0.56 0.0.0.3 area 0
 RT-Bogota(config-router)#do write
 RT-Bogota(config-router)#exit
 RT-Bogota(config)#exit
+
+
+---- GIGABITETHERNET 0/0 CONFIG (Host Bogotá)
+RT-Bogota>enable
+RT-Bogota#configure
+RT-Bogota(config)#interface gigabitEthernet0/0
+RT-Bogota(config-if)#ip address 172.20.0.73 255.255.255.248
+RT-Bogota(config-if)#no shutdown
+RT-Bogota(config-if)#exit
+RT-Bogota(config)#exit
+
+RT-Bogota#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+
+---- GIGABITETHERNET 0/1 CONFIG (Host ISP)
+RT-Bogota>enable 
+RT-Bogota#configure terminal
+RT-Bogota(config)#interface gigabitEthernet0/1
+RT-Bogota(config-if)#ip address 172.10.0.1 255.255.255.252
+RT-Bogota(config-if)#no shutdown
+RT-Bogota(config-if)#exit
+RT-Bogota(config)#exit
+
+RT-Bogota#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
